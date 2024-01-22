@@ -1,0 +1,101 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Task 1: Weight conversion
+        Console.Write("Weight in Pounds (lbs): ");
+        double weightInPounds = double.Parse(Console.ReadLine());
+        double weightInKilograms = weightInPounds * 0.453592;
+        Console.WriteLine($"Weight converted to Kilograms (kg): {weightInKilograms:F2}");
+
+        // Task 2: Length conversion
+        Console.Write("Length in Miles (mi): ");
+        double lengthInMiles = double.Parse(Console.ReadLine());
+        double lengthInKilometers = lengthInMiles * 1.60934;
+        Console.WriteLine($"Length converted to Kilometers (km): {lengthInKilometers:F2}");
+
+        // Task 3: Temperature conversion
+        Console.Write("Temperature in Fahrenheit (°F): ");
+        double temperatureInFahrenheit = double.Parse(Console.ReadLine());
+        double temperatureInCelsius = (temperatureInFahrenheit - 32) * 5 / 9;
+        Console.WriteLine($"Temperature converted to Celsius (°C): {temperatureInCelsius:F2}");
+
+        // Task 4: Average age calculation
+        int totalStudents = 10;
+        int[] ages = new int[totalStudents];
+        int sumOfAges = 0;
+
+        for (int i = 0; i < totalStudents; i++)
+        {
+            Console.Write($"Age of Student {i + 1}: ");
+            ages[i] = int.Parse(Console.ReadLine());
+            sumOfAges += ages[i];
+        }
+
+        double averageAge = (double)sumOfAges / totalStudents;
+        Console.WriteLine($"The average age of the students: {averageAge:F1}");
+
+        /*
+        // Story Section (commented out)
+        Console.WriteLine("The evil demon king Ibrahim the Destroyer~ has attacked...");
+        Console.WriteLine("...ultimate skill <Unlimited Burger Works>, to defeat the heroes.");
+        // Add more story elements as needed.
+        */
+    }
+}
+
+//PART 2
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a positive integer: ");
+        int n = int.Parse(Console.ReadLine());
+
+        if (n <= 0)
+        {
+            Console.WriteLine("Invalid input");
+        }
+        else
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(j + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a positive integer: ");
+        int n = int.Parse(Console.ReadLine());
+
+        if (n <= 0)
+        {
+            Console.WriteLine("Invalid input");
+        }
+        else
+        {
+            int sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                sum += i;
+            }
+
+            Console.WriteLine($"Sum of numbers from 1 to {n}: {sum}");
+        }
+    }
+}
